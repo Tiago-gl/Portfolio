@@ -1,0 +1,21 @@
+@import url("https://fonts.googleapis.com/css2?family=Newsreader:wght@400;500;600&family=Space+Grotesk:wght@400;500;600;700&display=swap");
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: "Space Grotesk", system-ui, sans-serif;
+  background: #f5f1e8;
+  color: #0f172a;
+}
+
+::selection {
+  background: #ffb44f;
+  color: #1e1b12;
+}
