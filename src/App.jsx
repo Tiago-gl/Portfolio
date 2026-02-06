@@ -1,5 +1,35 @@
 const projects = [
   {
+    title: "Flowboard de Metas",
+    summary:
+      "Dashboard Notion-lite em modo demo e somente leitura, com tarefas, hábitos e metas semanais em uma experiência fluida.",
+    year: "2026",
+    role: "Full Stack",
+    tags: ["React", "Tailwind", "PostgreSQL"],
+    embedUrl: "https://flowboard-tarefas.vercel.app/demo",
+    visit: "https://flowboard-tarefas.vercel.app", 
+  },
+  {
+    title: "Recomendei",
+    summary:
+      "Aplicativo que identifica filmes e séries a partir de gostos pessoais, com listas personalizadas e recomendações inteligentes.",
+    year: "2024",
+    role: "Full Stack",
+    tags: ["React", "Flask", "IA"],
+    embedUrl: "https://recomendei-filmes.vercel.app",
+    visit: "https://recomendei-filmes.vercel.app",  
+  },
+  {
+    title: "Gestão de Tarefas",
+    summary:
+      "Organizador de tarefas com prioridades, filtros e visão semanal para produtividade.",
+    year: "2026",
+    role: "Full Stack",
+    tags: ["React", "Tailwind", "PostgreSQL"],
+    embedUrl: "https://tarefas-web.vercel.app",
+    visit: "https://tarefas-web.vercel.app",
+  },
+  {
     title: "The Sims Randomizer",
     summary:
       "Gerador de personagens e mapas aleatórios para The Sims 4, com desafios criados a partir de sorteios.",
@@ -7,24 +37,7 @@ const projects = [
     role: "Front-end",
     tags: ["JavaScript", "Randomizer", "Github Pages"],
     embedUrl: "https://tiago-gl.github.io/TheSimsRandomizer/",
-  },
-  {
-    title: "Recomendei",
-    summary:
-      "Aplicativo que identifica filmes e séries a partir de gostos pessoais, com listas personalizadas e recomendações inteligentes.",
-    year: "2024",
-    role: "Front-end",
-    tags: ["React", "Vercel", "IA"],
-    embedUrl: "https://recomendei-filmes.vercel.app",
-  },
-  {
-    title: "Gestão de Tarefas",
-    summary:
-      "Organizador de tarefas com prioridades, filtros e visão semanal para produtividade.",
-    year: "2024",
-    role: "Front-end",
-    tags: ["React", "Vercel", "Produtividade"],
-    embedUrl: "https://tarefas-web.vercel.app",
+    visit: "https://tiago-gl.github.io/TheSimsRandomizer/",
   },
 ]
 
@@ -130,9 +143,19 @@ export default function App() {
                       {project.summary}
                     </p>
                   </div>
-                  <span className="inline-flex w-fit items-center rounded-full border border-slate-200 bg-slate-50 px-4 py-1 text-xs font-medium uppercase tracking-[0.2em] text-slate-600">
-                    {project.role}
-                  </span>
+                  <div className="flex flex-wrap items-center gap-3 md:justify-end">
+                    <span className="inline-flex w-fit items-center rounded-full border border-slate-200 bg-slate-50 px-4 py-1 text-xs font-medium uppercase tracking-[0.2em] text-slate-600">
+                      {project.role}
+                    </span>
+                    <a
+                      href={project.visit}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="inline-flex items-center rounded-full bg-[#0f172a] px-4 py-1 text-sm font-semibold uppercase tracking-[0.2em] text-white shadow-soft transition hover:-translate-y-0.5"
+                    >
+                      Visitar
+                    </a>
+                  </div>
                 </div>
 
                 <div className="mt-4 flex flex-wrap gap-2">
